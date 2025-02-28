@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeunesse & Numérique - Process</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-green-500 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                    <img src="../android-chrome-512x512.png" alt="Logo" class="w-10 h-10 rounded-full object-cover">
+                </div>
+                <span class="text-white text-xl font-bold">PROCESS</span>
+            </div>
+
+            <!-- Menu pour bureau -->
+            <div class="hidden md:flex space-x-6 text-white">
+                <a href="../index.html" class="hover:text-green-200">Accueil</a>
+                <a href="../services.html" class="hover:text-green-200">Services</a>
+                <a href="../about.html" class="hover:text-green-200">À Propos</a>
+                <a href="../contact.html" class="hover:text-green-200">Contact</a>
+            </div>
+
+            <!-- Bouton hamburger pour mobile -->
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu mobile -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html" class="block text-white hover:bg-green-600 rounded p-2">Accueil</a>
+                <a href="../services.html" class="block text-white hover:bg-green-600 rounded p-2">Services</a>
+                <a href="../about.html" class="block text-white hover:bg-green-600 rounded p-2">À Propos</a>
+                <a href="../contact.html" class="block text-white hover:bg-green-600 rounded p-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Logique pour le menu mobile
+        const menuButton = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        menuButton.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Fermer le menu si la fenêtre est redimensionnée au-dessus de la breakpoint mobile
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) { // 768px est la breakpoint 'md' de Tailwind
+                mobileMenu.classList.add('hidden');
+                isMenuOpen = false;
+            }
+        });
+    </script>
+
+    <!-- Article Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+            <!-- Article Header -->
+            <div class="p-6 border-b">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 bg-white rounded-full mr-3 overflow-hidden">
+                        <img src="../android-chrome-512x512.png" alt="Logo Process" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="font-bold">Process</h3>
+                        <p class="text-gray-500 text-sm">9 avr. 2024</p>
+                    </div>
+                </div>
+                <h1 class="text-3xl font-bold mb-2">Jeunesse & Numérique</h1>
+            </div>
+
+            <!-- Article Image -->
+            <div class="w-full bg-gray-100 p-4">
+                <div class="grid grid-cols-2 gap-4 max-w-2xl mx-auto">
+                    <img src="../img/jeunesse-numerique-1.jpg" alt="Jeunesse & Numérique Event Banner" class="w-full rounded-lg shadow-md" onerror="this.src='../img/placeholder.jpg'; this.onerror=null;">
+                    <img src="../img/jeunesse-numerique-2.jpg" alt="Jeunesse & Numérique Event Participants" class="w-full rounded-lg shadow-md" onerror="this.src='../img/placeholder.jpg'; this.onerror=null;">
+                </div>
+            </div>
+
+            <!-- Article Body -->
+            <div class="p-6">
+                <article class="prose max-w-none">
+                    <p class="mb-4">
+                        Lors de la journée dédiée à la jeunesse et au numérique le samedi 6 avril dernier, <strong>Process</strong> a été honoré en tant que partenaire de l'événement <strong>"JEUNESSE & NUMÉRIQUE"</strong> organisé par <strong>Young3.0</strong>.
+                    </p>
+
+                    <p class="mb-4">
+                        La séance s'est déroulée de manière très positive, avec des discussions animées lors des panels dirigés par des experts, offrant ainsi une expérience enrichissante aux participants.
+                    </p>
+
+                    <p class="mb-4">
+                        Les thèmes abordés ont inclus l'innovation technologique et l'entrepreneuriat numérique, mettant en lumière l'importance de ces sujets dans le contexte actuel.
+                    </p>
+
+                    <h3 class="text-xl font-bold mt-6 mb-3">L'importance du numérique pour la jeunesse</h3>
+                    <p class="mb-4">
+                        Cet événement souligne l'engagement de Process dans la promotion de compétences numériques auprès des jeunes, reconnaissant que la maîtrise des outils digitaux est devenue indispensable pour l'avenir professionnel.
+                    </p>
+
+                    <p class="mb-4">
+                        L'objectif principal de cette initiative était d'encourager l'inclusion dans le digital et de donner aux jeunes les moyens de s'adapter aux exigences du marché du travail moderne.
+                    </p>
+
+                    <h3 class="text-xl font-bold mt-6 mb-3">Contribution de Process</h3>
+                    <p class="mb-4">
+                        En tant que partenaire, Process a contribué à la réussite de l'événement en partageant son expertise dans les domaines technologiques et en facilitant les interactions entre les participants et les experts du secteur.
+                    </p>
+                    
+                    <p class="mb-4">
+                        Ces initiatives s'inscrivent parfaitement dans la mission de Process qui vise à soutenir le développement professionnel et personnel à travers la technologie et l'esprit d'équipe.
+                    </p>
+                </article>
+
+                <!-- Hashtags -->
+                <div class="flex flex-wrap gap-2 mt-6">
+                    <span class="bg-gray-100 text-green-600 px-3 py-1 rounded-full text-sm">#jeunesseetumerique</span>
+                    <span class="bg-gray-100 text-green-600 px-3 py-1 rounded-full text-sm">#Young3.0</span>
+                    <span class="bg-gray-100 text-green-600 px-3 py-1 rounded-full text-sm">#Process</span>
+                    <span class="bg-gray-100 text-green-600 px-3 py-1 rounded-full text-sm">#Innovation</span>
+                    <span class="bg-gray-100 text-green-600 px-3 py-1 rounded-full text-sm">#Entrepreneuriat</span>
+                    <span class="bg-gray-100 text-green-600 px-3 py-1 rounded-full text-sm">#numérique</span>
+                </div>
+
+                <!-- CTA -->
+                <div class="mt-8 border-t pt-6">
+                    <a href="../actualites.html" class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">
+                        ← Retour aux actualités
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">PROCESS</h3>
+                    <p class="text-gray-400">Process Till Success</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">Email: processtosucces1@gmail.com</p>
+                    <p class="text-gray-400">Tel: +229 01 91 80 73 87 </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Process. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
