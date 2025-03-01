@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités - Process Till Success</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-green-500 p-4 fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                    <img src="android-chrome-512x512.png" alt="Logo" class="w-10 h-10 rounded-full object-cover">
+                </div>
+                <span class="text-white text-xl font-bold">PROCESS</span>
+            </div>
+            
+            <!-- Menu pour bureau -->
+            <div class="hidden md:flex space-x-6 text-white">
+                <a href="index.html" class="hover:text-green-200">Accueil</a>
+                <a href="services.html" class="hover:text-green-200">Services</a>
+                <a href="about.html" class="hover:text-green-200">À Propos</a>
+                <a href="actualites.html" class="font-bold">Actualités</a>
+                <a href="contact.html" class="hover:text-green-200">Contact</a>
+            </div>
+            
+            <!-- Bouton hamburger pour mobile -->
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Menu mobile -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block text-white hover:bg-green-600 rounded p-2">Accueil</a>
+                <a href="services.html" class="block text-white hover:bg-green-600 rounded p-2">Services</a>
+                <a href="about.html" class="block text-white hover:bg-green-600 rounded p-2">À Propos</a>
+                <a href="actualites.html" class="block text-white bg-green-600 rounded p-2">Actualités</a>
+                <a href="contact.html" class="block text-white hover:bg-green-600 rounded p-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Logique pour le menu mobile
+        const menuButton = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        menuButton.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Fermer le menu si la fenêtre est redimensionnée au-dessus de la breakpoint mobile
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) { // 768px est la breakpoint 'md' de Tailwind
+                mobileMenu.classList.add('hidden');
+                isMenuOpen = false;
+            }
+        });
+    </script>
+
+    <!-- Espace pour compenser la barre de navigation fixe -->
+    <div class="pt-16"></div>
+
+    <!-- Header Section -->
+    <header class="bg-green-500 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl font-bold mb-4">Nos Actualités</h1>
+                <p class="text-xl">Découvrez les dernières nouvelles et événements de Process</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Actualité 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="actualites/img_2_1740763286351.jpg" alt="Ouf'Entrepreneurs Event" class="w-full h-48 object-cover" onerror="this.src='img/placeholder.jpg'; this.onerror=null;">
+                <div class="p-5">
+                    <div class="flex items-center mb-3">
+                        <div class="w-8 h-8 bg-white rounded-full mr-2 overflow-hidden">
+                            <img src="android-chrome-512x512.png" alt="Logo Process" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Process</h3>
+                            <p class="text-gray-500 text-sm">15 juil. 2024</p>
+                        </div>
+                    </div>
+                    <h4 class="font-semibold text-xl mb-2">Ouf'Entrepreneurs à Parakou</h4>
+                    <p class="text-gray-600 mb-4">
+                        Ce week-end, l'équipe Process s'est rendue à Parakou pour participer à l'événement Ouf'Entrepreneurs. Cette rencontre réunissait de jeunes entrepreneurs pour apprendre et se détendre.
+                    </p>
+                    <a href="actualites/ouf-entrepreneurs.html" class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">
+                        Lire la suite
+                    </a>
+                </div>
+            </div>
+
+            <!-- Actualité 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="w-full h-48 bg-green-100 flex items-center justify-center">
+                    <img src="actualites/img_2_1740762850970.jpg" alt="Jeunesse & Numérique Event" class="w-full h-48 object-cover" onerror="this.src='img/placeholder.jpg'; this.onerror=null;">
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center mb-3">
+                        <div class="w-8 h-8 bg-white rounded-full mr-2 overflow-hidden">
+                            <img src="android-chrome-512x512.png" alt="Logo Process" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Process</h3>
+                            <p class="text-gray-500 text-sm">9 avr. 2024</p>
+                        </div>
+                    </div>
+                    <h4 class="font-semibold text-xl mb-2">Jeunesse & Numérique</h4>
+                    <p class="text-gray-600 mb-4">
+                        Process a été honoré en tant que partenaire de l'événement "JEUNESSE & NUMÉRIQUE" organisé par Young3.0. La séance s'est déroulée de manière très positive, avec des discussions animées lors des panels.
+                    </p>
+                    <a href="actualites/jeunesse-numerique.html" class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">
+                        Lire la suite
+                    </a>
+                </div>
+            </div>
+
+            <!-- Placeholder pour futures actualités -->
+            <div class="bg-gray-50 rounded-lg border border-dashed border-gray-300 p-8 flex flex-col items-center justify-center text-center h-full">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                </div>
+                <h4 class="font-semibold text-xl mb-2">Plus d'actualités à venir</h4>
+                <p class="text-gray-500">
+                    Restez connectés pour découvrir nos prochains articles et événements.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Newsletter Section -->
+    <section class="bg-green-50 py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">Restez informés</h2>
+                <p class="text-gray-600 mb-6">
+                    Abonnez-vous à notre newsletter pour recevoir nos dernières actualités et événements.
+                </p>
+                <form class="flex flex-col md:flex-row gap-3 max-w-md mx-auto">
+                    <input type="email" placeholder="Votre adresse email" class="flex-grow px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <button type="submit" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition">
+                        S'abonner
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">PROCESS</h3>
+                    <p class="text-gray-400">Process Till Success</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">Email: processtosucces1@gmail.com</p>
+                    <p class="text-gray-400">Tel: +229 01 91 80 73 87 </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Process. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
