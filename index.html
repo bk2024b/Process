@@ -425,3 +425,28 @@
             </div>
         </div>
     </footer>
+     <script>
+        // Logique pour le menu mobile
+        const menuButton = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        menuButton.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Fermer le menu si la fenêtre est redimensionnée au-dessus de la breakpoint mobile
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) { // 768px est la breakpoint 'md' de Tailwind
+                mobileMenu.classList.add('hidden');
+                isMenuOpen = false;
+            }
+        });
+    </script>
+</body>
+</html>
