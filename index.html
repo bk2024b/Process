@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Process - Process Till Success</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-
 </head>
-<body>
+<body class="bg-gray-50">
 <!-- Navigation fixe -->
-<nav class="bg-green-500 p-4 fixed top-0 left-0 right-0 z-50">
+<nav class="bg-green-500 p-4 sticky top-0 shadow-md z-50">
     <div class="container mx-auto flex justify-between items-center">
         <div class="flex items-center space-x-2">
             <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
@@ -21,11 +21,11 @@
         
         <!-- Menu pour bureau -->
         <div class="hidden md:flex space-x-6 text-white">
-            <a href="index.html" class="hover:text-green-200">Accueil</a>
-            <a href="services.html" class="hover:text-green-200">Services</a>
-            <a href="about.html" class="hover:text-green-200">À Propos</a>
-            <a href="actualites.html" class="hover:text-green-200">Actualités</a>
-            <a href="contact.html" class="hover:text-green-200">Contact</a>
+            <a href="index.html" class="font-bold underline underline-offset-4">Accueil</a>
+            <a href="services.html" class="hover:text-green-200 transition duration-300">Services</a>
+            <a href="about.html" class="hover:text-green-200 transition duration-300">À Propos</a>
+            <a href="actualites.html" class="hover:text-green-200 transition duration-300">Actualités</a>
+            <a href="contact.html" class="hover:text-green-200 transition duration-300">Contact</a>
         </div>
         
         <!-- Bouton hamburger pour mobile -->
@@ -37,103 +37,259 @@
     </div>
     
     <!-- Menu mobile -->
-    <div class="md:hidden hidden" id="mobile-menu">
+    <div class="md:hidden hidden bg-green-600 mt-2 rounded-b-lg shadow-lg" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="index.html" class="block text-white hover:bg-green-600 rounded p-2">Accueil</a>
-            <a href="services.html" class="block text-white hover:bg-green-600 rounded p-2">Services</a>
-            <a href="about.html" class="block text-white hover:bg-green-600 rounded p-2">À Propos</a>
-            <a href="actualites.html" class="block text-white hover:bg-green-600 rounded p-2">Actualités</a>
-            <a href="contact.html" class="block text-white hover:bg-green-600 rounded p-2">Contact</a>
+            <a href="index.html" class="block text-white bg-green-700 rounded p-2 font-bold">Accueil</a>
+            <a href="services.html" class="block text-white hover:bg-green-700 rounded p-2 transition duration-300">Services</a>
+            <a href="about.html" class="block text-white hover:bg-green-700 rounded p-2 transition duration-300">À Propos</a>
+            <a href="actualites.html" class="block text-white hover:bg-green-700 rounded p-2 transition duration-300">Actualités</a>
+            <a href="contact.html" class="block text-white hover:bg-green-700 rounded p-2 transition duration-300">Contact</a>
         </div>
     </div>
 </nav>
 
-<!-- Espace pour compenser la barre de navigation fixe -->
-<div class="pt-16"></div>
-<script>
-    // Logique pour le menu mobile
-    const menuButton = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    let isMenuOpen = false;
-
-    menuButton.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
-        if (isMenuOpen) {
-            mobileMenu.classList.remove('hidden');
-        } else {
-            mobileMenu.classList.add('hidden');
-        }
-    });
-
-    // Fermer le menu si la fenêtre est redimensionnée au-dessus de la breakpoint mobile
-    window.addEventListener('resize', () => {
-        if (window.innerWidth >= 768) { // 768px est la breakpoint 'md' de Tailwind
-            mobileMenu.classList.add('hidden');
-            isMenuOpen = false;
-        }
-    });
-</script>
-    <!-- Hero Section -->
-    <header class="bg-green-500 text-white py-16">
-        <div class="container mx-auto px-4">
-            <div class="max-w-2xl">
-                <h1 class="text-4xl font-bold mb-4">Process Till Success</h1>
-                <p class="text-xl mb-8">Notre Esprit d'Équipe à Votre Service</p>
-                <a href="contact.html" class="bg-white text-green-500 px-6 py-3 rounded-full font-semibold hover:bg-green-50">
+<!-- Hero Section avec dégradé comme la page services -->
+<header class="bg-gradient-to-r from-green-500 to-green-600 text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-2xl">
+            <h1 class="text-4xl font-bold mb-4">Process Till Success</h1>
+            <p class="text-xl mb-8">Notre Esprit d'Équipe à Votre Service pour une Transformation Digitale Réussie</p>
+            <div class="flex space-x-4">
+                <a href="contact.html" class="bg-white text-green-500 px-6 py-3 rounded-full font-semibold hover:bg-green-50 transition duration-300 shadow-lg">
                     Collaborons
+                </a>
+                <a href="services.html" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-green-500 transition duration-300">
+                    Nos services
                 </a>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- Services Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Nos Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="p-6 bg-white rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2">Développement personnel</h3>
-                    <p class="text-gray-600">Accompagnement personnalisé pour votre croissance professionnelle</p>
+<!-- Bannière de valeurs -->
+<section class="bg-white py-8 shadow-md">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+            <div class="flex flex-col items-center">
+                <div class="text-green-500 text-3xl mb-2">
+                    <i class="fas fa-users"></i>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2">Maintenance Informatique & Réseau</h3>
-                    <p class="text-gray-600">Solutions techniques complètes pour votre infrastructure</p>
+                <h3 class="font-semibold">Esprit d'équipe</h3>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="text-green-500 text-3xl mb-2">
+                    <i class="fas fa-thumbs-up"></i>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2">Graphisme</h3>
-                    <p class="text-gray-600">Création visuelle et design professionnel</p>
+                <h3 class="font-semibold">Qualité garantie</h3>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="text-green-500 text-3xl mb-2">
+                    <i class="fas fa-lightbulb"></i>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2">Anglais</h3>
-                    <p class="text-gray-600">Formation et perfectionnement en langue anglaise</p>
+                <h3 class="font-semibold">Innovation</h3>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="text-green-500 text-3xl mb-2">
+                    <i class="fas fa-handshake"></i>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2">Agronomie</h3>
-                    <p class="text-gray-600">Expertise et conseil en agriculture durable</p>
-                </div>
+                <h3 class="font-semibold">Satisfaction client</h3>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Team Section -->
-    <section class="bg-gray-50 py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">L'esprit d'équipe</h2>
-            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-8">
-                Nous croyons en la force de la collaboration et du travail d'équipe. 
-                Notre approche centrée sur l'humain nous permet de créer des solutions 
-                adaptées à vos besoins spécifiques.
-            </p>
-        </div>
-    </section>
-<!-- News Section -->
-<section class="py-12 bg-white">
+<!-- Services Section avec icônes -->
+<section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-8">Actualités</h2>
+        <h2 class="text-3xl font-bold text-center mb-4">Nos Services</h2>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Découvrez notre gamme complète de services professionnels conçus pour répondre à tous vos besoins</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div class="text-green-500 text-4xl mb-4">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Développement personnel</h3>
+                <p class="text-gray-600 mb-4">Accompagnement personnalisé pour votre croissance professionnelle et épanouissement personnel.</p>
+                <a href="services.html" class="text-green-500 hover:text-green-700 font-medium inline-flex items-center">
+                    En savoir plus
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div class="text-green-500 text-4xl mb-4">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Maintenance Informatique & Réseau</h3>
+                <p class="text-gray-600 mb-4">Solutions techniques complètes pour assurer la performance de votre infrastructure informatique.</p>
+                <a href="services.html" class="text-green-500 hover:text-green-700 font-medium inline-flex items-center">
+                    En savoir plus
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div class="text-green-500 text-4xl mb-4">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Graphisme</h3>
+                <p class="text-gray-600 mb-4">Création visuelle et design professionnel pour renforcer votre image de marque et votre communication.</p>
+                <a href="services.html" class="text-green-500 hover:text-green-700 font-medium inline-flex items-center">
+                    En savoir plus
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div class="text-green-500 text-4xl mb-4">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Anglais</h3>
+                <p class="text-gray-600 mb-4">Formation et perfectionnement en langue anglaise adaptée à vos besoins professionnels et personnels.</p>
+                <a href="services.html" class="text-green-500 hover:text-green-700 font-medium inline-flex items-center">
+                    En savoir plus
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div class="text-green-500 text-4xl mb-4">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Agronomie</h3>
+                <p class="text-gray-600 mb-4">Expertise et conseil en agriculture durable pour optimiser votre production tout en respectant l'environnement.</p>
+                <a href="services.html" class="text-green-500 hover:text-green-700 font-medium inline-flex items-center">
+                    En savoir plus
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div class="text-green-500 text-4xl mb-4">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Développement Web</h3>
+                <p class="text-gray-600 mb-4">Création de sites web et d'applications modernes pour assurer votre présence digitale efficace.</p>
+                <a href="services.html" class="text-green-500 hover:text-green-700 font-medium inline-flex items-center">
+                    En savoir plus
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <div class="text-center mt-10">
+            <a href="services.html" class="inline-block bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition duration-300 font-semibold">
+                Voir tous nos services
+            </a>
+        </div>
+    </div>
+</section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Team Section améliorée -->
+<section class="bg-white py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4">L'esprit d'équipe</h2>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+            Chez Process, nous croyons fermement en la force de la collaboration et du travail d'équipe. 
+            Notre approche centrée sur l'humain nous permet de créer des solutions 
+            adaptées à vos besoins spécifiques.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-3 text-green-600">Notre philosophie</h3>
+                <p class="text-gray-700 mb-4">
+                    Chez Process, nous travaillons comme une équipe soudée, où chaque membre apporte son expertise unique.
+                    Cette synergie nous permet d'offrir des solutions complètes et innovantes pour répondre à tous vos défis.
+                </p>
+                <ul class="space-y-2">
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-green-500 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Communication transparente à chaque étape</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-green-500 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Professionnalisme et rigueur dans la réalisation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-green-500 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Engagement total pour votre satisfaction</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-3 text-green-600">Pourquoi nous choisir</h3>
+                <p class="text-gray-700 mb-4">
+                    Notre équipe pluridisciplinaire vous offre un accompagnement sur mesure, avec une attention particulière
+                    à vos objectifs et contraintes spécifiques.
+                </p>
+                <ul class="space-y-2">
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-green-500 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Expertise dans de multiples domaines complémentaires</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-green-500 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Solutions personnalisées à votre contexte</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-green-500 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Suivi et support continus après réalisation</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <a href="about.html" class="inline-block bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition duration-300 font-semibold">
+                En savoir plus sur notre équipe
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- News Section -->
+<section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4">Actualités</h2>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-8">
+            Restez informés des dernières activités et événements auxquels participe notre équipe
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- News Item 1 -->
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="h-48 bg-gray-200 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-green-500 bg-opacity-70 flex items-center justify-center text-white">
+                        <i class="fas fa-users text-5xl"></i>
+                    </div>
+                </div>
                 <div class="p-5">
                     <div class="flex items-center mb-3">
                         <div class="w-8 h-8 bg-white rounded-full mr-2 overflow-hidden">
@@ -156,6 +312,11 @@
 
             <!-- News Item 2 -->
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="h-48 bg-gray-200 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-green-500 bg-opacity-70 flex items-center justify-center text-white">
+                        <i class="fas fa-laptop-code text-5xl"></i>
+                    </div>
+                </div>
                 <div class="p-5">
                     <div class="flex items-center mb-3">
                         <div class="w-8 h-8 bg-white rounded-full mr-2 overflow-hidden">
@@ -175,6 +336,33 @@
                     </a>
                 </div>
             </div>
+            
+            <!-- News Item 3 (nouveau) -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="h-48 bg-gray-200 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-green-500 bg-opacity-70 flex items-center justify-center text-white">
+                        <i class="fas fa-chalkboard-teacher text-5xl"></i>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center mb-3">
+                        <div class="w-8 h-8 bg-white rounded-full mr-2 overflow-hidden">
+                            <img src="android-chrome-512x512.png" alt="Logo Process" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Process</h3>
+                            <p class="text-gray-500 text-sm">2 fév. 2024</p>
+                        </div>
+                    </div>
+                    <h4 class="font-semibold text-xl mb-2">Atelier de formation</h4>
+                    <p class="text-gray-600 mb-4">
+                        Process a organisé un atelier de formation sur les compétences numériques essentielles pour les jeunes entrepreneurs. Plus de 30 participants ont bénéficié de cette formation pratique.
+                    </p>
+                    <a href="actualites.html" class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">
+                        Lire la suite
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div class="text-center mt-8">
@@ -184,23 +372,74 @@
         </div>
     </div>
 </section>
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <h3 class="text-xl font-bold">PROCESS</h3>
-                    <p class="text-gray-400">Process Till Success</p>
-                </div>
-                <div class="text-center md:text-right">
-                    <p class="text-gray-400">Email: processtosucces1@gmail.com</p>
-                    <p class="text-gray-400">Tel: +229 01 91 80 73 87 </p>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2025 Process. Tous droits réservés.</p>
-            </div>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-green-600 to-green-700 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">Prêt à transformer votre projet en succès ?</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+            Contactez notre équipe dès aujourd'hui pour discuter de vos besoins et découvrir comment notre expertise peut vous aider.
+        </p>
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center">
+            <a href="contact.html" class="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-green-100 transition duration-300 shadow-lg">
+                Contactez-nous
+            </a>
+            <a href="tel:+22901918073" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-green-600 transition duration-300">
+                <i class="fas fa-phone-alt mr-2"></i> +229 01 91 80 73
+            </a>
         </div>
-    </footer>
-</body>
-</html>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                        <img src="android-chrome-512x512.png" alt="Logo" class="w-10 h-10 rounded-full object-cover">
+                    </div>
+                    <span class="text-white text-xl font-bold">PROCESS</span>
+                </div>
+                <p class="text-gray-400 mb-4">Process Till Success - Notre esprit d'équipe à votre service pour des solutions innovantes et efficaces.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="font-bold text-lg mb-4">Liens rapides</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Accueil</a></li>
+                    <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">À propos</a></li>
+                    <li><a href="actualites.html" class="text-gray-400 hover:text-white transition duration-300">Actualités</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="font-bold text-lg mb-4">Contact</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="fas fa-envelope text-green-500 mr-3 mt-1"></i>
+                        <span class="text-gray-400">processtosucces1@gmail.com</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-phone-alt text-green-500 mr-3 mt-1"></i>
+                        <span class="text-gray-400">+229 01 91 80 73 87</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-green-500 mr
