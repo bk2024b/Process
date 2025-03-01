@@ -7,9 +7,10 @@
     <title>Nos Services - Process</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-      <nav class="bg-green-500 p-4">
+<body class="bg-gray-50">
+    <nav class="bg-green-500 p-4 sticky top-0 shadow-md z-50">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
@@ -20,10 +21,10 @@
             
             <!-- Menu pour bureau -->
             <div class="hidden md:flex space-x-6 text-white">
-                <a href="index.html" class="hover:text-green-200">Accueil</a>
-                <a href="services.html" class="font-bold">Services</a>
-                <a href="about.html" class="hover:text-green-200">À Propos</a>
-                <a href="contact.html" class="hover:text-green-200">Contact</a>
+                <a href="index.html" class="hover:text-green-200 transition duration-300">Accueil</a>
+                <a href="services.html" class="font-bold underline underline-offset-4">Services</a>
+                <a href="about.html" class="hover:text-green-200 transition duration-300">À Propos</a>
+                <a href="contact.html" class="hover:text-green-200 transition duration-300">Contact</a>
             </div>
             
             <!-- Bouton hamburger pour mobile -->
@@ -35,15 +36,210 @@
         </div>
         
         <!-- Menu mobile -->
-        <div class="md:hidden hidden" id="mobile-menu">
+        <div class="md:hidden hidden bg-green-600 mt-2 rounded-b-lg shadow-lg" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="block text-white hover:bg-green-600 rounded p-2">Accueil</a>
-                <a href="services.html" class="block text-white bg-green-600 rounded p-2">Services</a>
-                <a href="about.html" class="block text-white hover:bg-green-600 rounded p-2">À Propos</a>
-                <a href="contact.html" class="block text-white hover:bg-green-600 rounded p-2">Contact</a>
+                <a href="index.html" class="block text-white hover:bg-green-700 rounded p-2 transition duration-300">Accueil</a>
+                <a href="services.html" class="block text-white bg-green-700 rounded p-2 font-bold">Services</a>
+                <a href="about.html" class="block text-white hover:bg-green-700 rounded p-2 transition duration-300">À Propos</a>
+                <a href="contact.html" class="block text-white hover:bg-green-700 rounded p-2 transition duration-300">Contact</a>
             </div>
         </div>
     </nav>
+
+    <!-- En-tête de page -->
+    <header class="bg-gradient-to-r from-green-500 to-green-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4">Nos Services</h1>
+            <p class="text-xl max-w-2xl mx-auto">Découvrez notre gamme complète de services professionnels pour répondre à tous vos besoins.</p>
+        </div>
+    </header>
+    
+    <!-- Services principaux -->
+    <section class="py-16 container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Services professionnels</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div class="text-green-500 text-4xl mb-4">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Développement personnel</h3>
+                <p class="text-gray-600 mb-4">Accompagnement personnalisé pour une meilleure croissance personnelle et professionnelle. Nos coachs experts vous aident à atteindre vos objectifs.</p>
+                <a href="#contact" class="text-green-500 hover:text-green-700 font-medium inline-flex items-center">
+                    En savoir plus
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div class="text-green-500 text-4xl mb-4">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Maintenance Informatique</h3>
+                <p class="text-gray-600 mb-4">Solutions techniques adaptées à vos besoins informatiques. Résolution de problèmes, optimisation et protection de vos systèmes.</p>
+                <a href="#contact" class="text-green-500 hover:text-green-700 font-medium inline-flex items-center">
+                    En savoir plus
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div class="text-green-500 text-4xl mb-4">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Développement Web</h3>
+                <p class="text-gray-600 mb-4">Création d'applications web modernes et performantes. De la conception à la mise en production, nous assurons le développement complet de votre projet.</p>
+                <a href="#contact" class="text-green-500 hover:text-green-700 font-medium inline-flex items-center">
+                    En savoir plus
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div class="text-green-500 text-4xl mb-4">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Création de Site Web</h3>
+                <p class="text-gray-600 mb-4">Conception et réalisation de sites web professionnels, responsive et optimisés pour le référencement. Des solutions sur mesure pour votre présence en ligne.</p>
+                <a href="#contact" class="text-green-500 hover:text-green-700 font-medium inline-flex items-center">
+                    En savoir plus
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section Processus de travail -->
+    <section class="py-16 bg-green-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Notre processus de travail</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-semibold mb-2">Consultation</h3>
+                    <p class="text-gray-600">Nous discutons de vos besoins et objectifs pour mieux comprendre votre projet.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-semibold mb-2">Planification</h3>
+                    <p class="text-gray-600">Nous élaborons une stratégie détaillée adaptée à vos exigences spécifiques.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-semibold mb-2">Exécution</h3>
+                    <p class="text-gray-600">Nous mettons en œuvre les solutions avec des mises à jour régulières sur l'avancement.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+                    <h3 class="text-xl font-semibold mb-2">Livraison</h3>
+                    <p class="text-gray-600">Nous finalisons le projet et assurons un suivi pour garantir votre satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Témoignages -->
+    <section class="py-16 container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Ce que disent nos clients</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="p-6 bg-white rounded-lg shadow-lg">
+                <div class="flex items-center mb-4">
+                    <div class="text-yellow-400 flex">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic mb-4">"Le développement personnel proposé par Process a transformé ma façon d'aborder les défis professionnels. Hautement recommandé!"</p>
+                <div class="font-semibold">Marie K.</div>
+            </div>
+            
+            <div class="p-6 bg-white rounded-lg shadow-lg">
+                <div class="flex items-center mb-4">
+                    <div class="text-yellow-400 flex">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic mb-4">"Notre site web réalisé par Process est exactement ce dont nous avions besoin. Professionnel, rapide et à l'écoute de nos besoins."</p>
+                <div class="font-semibold">Thomas G.</div>
+            </div>
+            
+            <div class="p-6 bg-white rounded-lg shadow-lg">
+                <div class="flex items-center mb-4">
+                    <div class="text-yellow-400 flex">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic mb-4">"Le service de maintenance informatique a résolu tous nos problèmes techniques. Une équipe réactive et compétente."</p>
+                <div class="font-semibold">Sophie M.</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="py-16 bg-green-500 text-white" id="contact">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Prêt à travailler avec nous ?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Contactez-nous dès aujourd'hui pour discuter de votre projet et découvrir comment nous pouvons vous aider à atteindre vos objectifs.</p>
+            <a href="contact.html" class="bg-white text-green-500 hover:bg-green-100 font-bold py-3 px-8 rounded-full inline-block transition duration-300">Contactez-nous</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">PROCESS</h3>
+                    <p class="text-gray-400">Process Till Success</p>
+                </div>
+                <div class="mb-4 md:mb-0 text-center">
+                    <div class="flex space-x-4 justify-center">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">Email: processtosucces1@gmail.com</p>
+                    <p class="text-gray-400">Tel: +229 01 91 80 73 87</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Process. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
     <script>
         // Logique pour le menu mobile
         const menuButton = document.getElementById('menu-toggle');
@@ -67,38 +263,5 @@
             }
         });
     </script>
-
-    
-    <section class="py-16 container mx-auto px-4">
-        <h1 class="text-4xl font-bold text-center mb-12">Nos services</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="p-6 bg-white rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold mb-2">Développement personnel</h3>
-                <p class="text-gray-600">Accompagnement pour une meilleure croissance.</p>
-            </div>
-            <div class="p-6 bg-white rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold mb-2">Maintenance Informatique</h3>
-                <p class="text-gray-600">Solutions techniques adaptées à vos besoins.</p>
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <h3 class="text-xl font-bold">PROCESS</h3>
-                    <p class="text-gray-400">Process Till Success</p>
-                </div>
-                <div class="text-center md:text-right">
-                    <p class="text-gray-400">Email: processtosucces1@gmail.com</p>
-                    <p class="text-gray-400">Tel: +229 01 91 80 73 87</p>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2025 Process. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
