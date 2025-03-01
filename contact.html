@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Process Till Success</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="bg-green-500 p-4">
+<body class="bg-gray-50">
+    <!-- Navigation - Identique à la page services -->
+    <nav class="bg-green-500 p-4 sticky top-0 shadow-md z-50">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
@@ -20,10 +21,10 @@
             
             <!-- Menu pour bureau -->
             <div class="hidden md:flex space-x-6 text-white">
-                <a href="index.html" class="hover:text-green-200">Accueil</a>
-                <a href="services.html" class="hover:text-green-200">Services</a>
-                <a href="about.html" class="hover:text-green-200">À Propos</a>
-                <a href="contact.html" class="font-bold">Contact</a>
+                <a href="index.html" class="hover:text-green-200 transition duration-300">Accueil</a>
+                <a href="services.html" class="hover:text-green-200 transition duration-300">Services</a>
+                <a href="about.html" class="hover:text-green-200 transition duration-300">À Propos</a>
+                <a href="contact.html" class="font-bold underline underline-offset-4">Contact</a>
             </div>
             
             <!-- Bouton hamburger pour mobile -->
@@ -35,15 +36,242 @@
         </div>
         
         <!-- Menu mobile -->
-        <div class="md:hidden hidden" id="mobile-menu">
+        <div class="md:hidden hidden bg-green-600 mt-2 rounded-b-lg shadow-lg" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="block text-white hover:bg-green-600 rounded p-2">Accueil</a>
-                <a href="services.html" class="block text-white hover:bg-green-600 rounded p-2">Services</a>
-                <a href="about.html" class="block text-white hover:bg-green-600 rounded p-2">À Propos</a>
-                <a href="contact.html" class="block text-white bg-green-600 rounded p-2">Contact</a>
+                <a href="index.html" class="block text-white hover:bg-green-700 rounded p-2 transition duration-300">Accueil</a>
+                <a href="services.html" class="block text-white hover:bg-green-700 rounded p-2 transition duration-300">Services</a>
+                <a href="about.html" class="block text-white hover:bg-green-700 rounded p-2 transition duration-300">À Propos</a>
+                <a href="contact.html" class="block text-white bg-green-700 rounded p-2 font-bold">Contact</a>
             </div>
         </div>
     </nav>
+
+    <!-- En-tête de page - Style identique à services.html -->
+    <header class="bg-gradient-to-r from-green-500 to-green-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4">Contactez-nous</h1>
+            <p class="text-xl max-w-2xl mx-auto">Nous sommes à votre écoute pour répondre à toutes vos questions et vous accompagner dans vos projets.</p>
+        </div>
+    </header>
+
+    <!-- Contact Section - Amélioré -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-10 max-w-6xl mx-auto">
+                <!-- Informations de contact -->
+                <div class="lg:w-1/3">
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h2 class="text-2xl font-bold mb-6 text-green-600">Nos coordonnées</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="text-green-500 text-xl mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Email</h3>
+                                    <p class="text-gray-600">processtosucces1@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="text-green-500 text-xl mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Téléphone</h3>
+                                    <p class="text-gray-600">+229 01 91 80 73 87</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="text-green-500 text-xl mt-1">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Horaires</h3>
+                                    <p class="text-gray-600">Lun-Ven: 9h-18h<br>Sam: 9h-13h</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h3 class="font-semibold text-gray-800 mb-4">Suivez-nous</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-blue-400 text-white rounded-full flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-pink-600 text-white rounded-full flex items-center justify-center hover:bg-pink-700 transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-blue-700 text-white rounded-full flex items-center justify-center hover:bg-blue-800 transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulaire de contact -->
+                <div class="lg:w-2/3">
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h2 class="text-2xl font-bold mb-6 text-green-600">Envoyez-nous un message</h2>
+                        <form action="https://formspree.io/f/xbldpvkp" method="POST" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 mb-2 font-medium">Nom complet</label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <i class="fas fa-user text-gray-400"></i>
+                                        </div>
+                                        <input type="text" id="name" name="name" required
+                                            class="w-full pl-10 px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 transition duration-300">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-gray-700 mb-2 font-medium">Email</label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <i class="fas fa-envelope text-gray-400"></i>
+                                        </div>
+                                        <input type="email" id="email" name="email" required
+                                            class="w-full pl-10 px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 transition duration-300">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-gray-700 mb-2 font-medium">Sujet</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                        <i class="fas fa-pencil-alt text-gray-400"></i>
+                                    </div>
+                                    <input type="text" id="subject" name="subject" required
+                                        class="w-full pl-10 px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 transition duration-300">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-gray-700 mb-2 font-medium">Service souhaité</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                        <i class="fas fa-briefcase text-gray-400"></i>
+                                    </div>
+                                    <select id="service" name="service"
+                                        class="w-full pl-10 px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 transition duration-300">
+                                        <option value="">Sélectionnez un service</option>
+                                        <option value="développement personnel">Développement personnel</option>
+                                        <option value="maintenance informatique">Maintenance Informatique</option>
+                                        <option value="développement web">Développement Web</option>
+                                        <option value="création site web">Création de Site Web</option>
+                                        <option value="formation anglais">Formation en Anglais</option>
+                                        <option value="expertise agronomie">Expertise en Agronomie</option>
+                                        <option value="graphisme">Graphisme</option>
+                                        <option value="autre">Autre (précisez dans le message)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 mb-2 font-medium">Message</label>
+                                <div class="relative">
+                                    <div class="absolute top-3 left-3 pointer-events-none">
+                                        <i class="fas fa-comment-dots text-gray-400"></i>
+                                    </div>
+                                    <textarea id="message" name="message" rows="6" required
+                                        class="w-full pl-10 px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 transition duration-300"></textarea>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" 
+                                class="w-full bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition duration-300 flex items-center justify-center space-x-2">
+                                <span>Envoyer le message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section - Nouvelle section -->
+    <section class="py-16 bg-green-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Questions fréquentes</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center focus:outline-none">
+                        <span>Quels sont vos délais de réponse ?</span>
+                        <i class="fas fa-chevron-down text-green-500"></i>
+                    </button>
+                    <div class="px-6 py-4 border-t">
+                        <p class="text-gray-600">Nous nous engageons à répondre à toutes les demandes dans un délai de 24-48 heures ouvrables. Pour les demandes urgentes, n'hésitez pas à nous contacter par téléphone.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center focus:outline-none">
+                        <span>Comment se déroule la première consultation ?</span>
+                        <i class="fas fa-chevron-down text-green-500"></i>
+                    </button>
+                    <div class="px-6 py-4 border-t">
+                        <p class="text-gray-600">La première consultation est généralement gratuite et dure environ 30 minutes. Elle peut se faire en personne, par téléphone ou par visioconférence selon votre préférence. Nous discuterons de vos besoins et objectifs pour établir la meilleure approche.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center focus:outline-none">
+                        <span>Proposez-vous des devis personnalisés ?</span>
+                        <i class="fas fa-chevron-down text-green-500"></i>
+                    </button>
+                    <div class="px-6 py-4 border-t">
+                        <p class="text-gray-600">Oui, tous nos devis sont personnalisés en fonction de vos besoins spécifiques. Après notre consultation initiale, nous vous enverrons un devis détaillé comprenant les services, les délais et les tarifs proposés.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">PROCESS</h3>
+                    <p class="text-gray-400">Process Till Success</p>
+                </div>
+                <div class="mb-4 md:mb-0 text-center">
+                    <div class="flex space-x-4 justify-center">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">Email: processtosucces1@gmail.com</p>
+                    <p class="text-gray-400">Tel: +229 01 91 80 73 87</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Process. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
     <script>
         // Logique pour le menu mobile
         const menuButton = document.getElementById('menu-toggle');
@@ -66,89 +294,50 @@
                 isMenuOpen = false;
             }
         });
-    </script>
 
-    <!-- Contact Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl font-bold text-center mb-12">Contactez-nous</h1>
-            
-            <div class="max-w-2xl mx-auto">
-                <form action="https://formspree.io/f/xbldpvkp" method="POST" class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-gray-700 mb-2">Nom complet</label>
-                        <input type="text" id="name" name="name" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
-                    </div>
-                    
-                    <div>
-                        <label for="email" class="block text-gray-700 mb-2">Email</label>
-                        <input type="email" id="email" name="email" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
-                    </div>
-                    
-                    <div>
-                        <label for="subject" class="block text-gray-700 mb-2">Sujet</label>
-                        <input type="text" id="subject" name="subject" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
-                    </div>
-                    
-                    <div>
-                        <label for="message" class="block text-gray-700 mb-2">Message</label>
-                        <textarea id="message" name="message" rows="6" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"></textarea>
-                    </div>
-                    
-                    <button type="submit" 
-                        class="w-full bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition duration-300">
-                        Envoyer le message
-                    </button>
-                </form>
-                <script>
-    const form = document.querySelector('form');
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => {
-            if (response.ok) {
-                alert('Message envoyé avec succès !');
-                form.reset();
-            } else {
+        // Script pour le formulaire
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Message envoyé avec succès !');
+                    form.reset();
+                } else {
+                    alert('Une erreur est survenue. Veuillez réessayer.');
+                }
+            })
+            .catch(error => {
                 alert('Une erreur est survenue. Veuillez réessayer.');
-            }
-        })
-        .catch(error => {
-            alert('Une erreur est survenue. Veuillez réessayer.');
+            });
         });
-    });
-</script>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <h3 class="text-xl font-bold">PROCESS</h3>
-                    <p class="text-gray-400">Process Till Success</p>
-                </div>
-                <div class="text-center md:text-right">
-                    <p class="text-gray-400">Email: processtosucces1@gmail.com</p>
-                    <p class="text-gray-400">Tel: +229 01 91 80 73 87</p>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2025 Process. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
+        // Script pour les FAQ accordéon
+        const faqButtons = document.querySelectorAll('.bg-white.rounded-lg button');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                // Toggle content visibility
+                if (content.style.display === 'none' || content.style.display === '') {
+                    content.style.display = 'block';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    content.style.display = 'none';
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
